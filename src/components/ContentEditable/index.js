@@ -6,6 +6,7 @@ export default class ContentEditable extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      notes: "test notes",
       disabled: true
     }
     this.hasFocused = false

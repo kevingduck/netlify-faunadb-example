@@ -31,11 +31,12 @@ export default class App extends Component {
       })
     })
   }
+
   saveTodo = (e) => {
     e.preventDefault()
     const { todos } = this.state
     const todoValue = this.inputElement.value
-
+    // const todoNotesValue = this.getElementById("searchTxt").value;
     if (!todoValue) {
       alert('Please add Todo title')
       this.inputElement.focus()
@@ -280,21 +281,62 @@ export default class App extends Component {
 
         <div className='todo-list'>
           <h2>
-            Create todo
+            Track Project
             <SettingsIcon onClick={this.openModal} className='mobile-toggle' />
           </h2>
-          <form className='todo-create-wrapper' onSubmit={this.saveTodo}>
+          <form className='todo-create-wrapper' onSubmit={this.saveTodo} style={{display: "block"}}>
             <input
               className='todo-create-input'
-              placeholder='Add a todo item'
+              placeholder='Customer Name'
               name='name'
               ref={el => this.inputElement = el}
               autoComplete='off'
-              style={{marginRight: 20}}
+            />
+            <input
+              className='todo-create-input'
+              placeholder='Shipping address'
+              name='ship_to'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
+            />
+            <input
+              className='todo-create-input'
+              placeholder='Email'
+              name='email'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
+            />
+            <input
+              className='todo-create-input'
+              placeholder='Invoice Address'
+              name='invoice_address'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
+            />
+            <input
+              className='todo-create-input'
+              placeholder='Billing %'
+              name='billing'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
+            />
+            <input
+              className='todo-create-input'
+              placeholder='Representative'
+              name='representative'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
+            />
+            <input
+              className='todo-create-input'
+              placeholder='PO Number'
+              name='po_number'
+              ref={el => this.inputElement = el}
+              autoComplete='off'
             />
             <div className='todo-actions'>
               <button className='todo-create-button'>
-                Create todo
+                Save
               </button>
               <SettingsIcon onClick={this.openModal}  className='desktop-toggle' />
             </div>

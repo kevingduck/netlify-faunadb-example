@@ -36,6 +36,8 @@ export default class Editable extends React.Component {
     if (!this.htmlEl) {
       return false
     }
+    debugger;
+
     const html = this.htmlEl.innerHTML
     if (this.props.onChange && html !== this.lastHtml) {
       evt.target.value = html

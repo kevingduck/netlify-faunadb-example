@@ -19,7 +19,7 @@
   align-items: center;
 }
 .todo-create-input {
-  font-size: 14px;
+  font-size: 24px;
   padding: 11px 15px;
   min-width: 300px;
   display: inline-block;
@@ -27,6 +27,7 @@
   border: none;
   outline: none;
   transition: all 0.3s ease;
+  margin:10px;
 }
 .todo-create-input:hover, .todo-create-input:active, .todo-create-input:focus {
   box-shadow: 0px 0px 0px 2px rgb(43, 190, 185);
